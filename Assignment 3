@@ -1,0 +1,45 @@
+import java.io.*;
+abstract class fibo1
+{
+    int n;
+    int d;
+    int a1=0;
+         int b1=1;
+          int c1;
+    abstract void fibonaci();
+}
+public class Abs_Fibbonacci {
+    public static void main(String[] args) throws Exception
+ {
+     fibo2 obj = new fibo2();
+     obj.fibonaci();
+ }
+}
+class fibo2 extends fibo1
+{
+    
+    void fibonaci()
+    {
+        try{
+        File file = new File("C:\\Users\\ragav\\Pictures\\Input.txt");
+         FileReader fin= new FileReader(file);
+         while ((n=fin.read())!= -1){
+             System.out.println("Fibonacci series upto "+n+" is :-");
+             d=n;
+         }
+         
+      while(c<d)
+         {
+             System.out.print(c1+" ");
+             c1=a1+b1;
+             a1=b1;
+             b1=c1;
+             
+         }
+       
+         
+         
+        }catch(IOException e)
+        {}
+}
+}
